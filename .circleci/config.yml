@@ -7,6 +7,9 @@ jobs:
     steps: 
       - checkout 
       - run: make deps 
+      - run:
+          name: Set PYTHONPATH
+          command: echo "export PYTHONPATH=$(pwd)" >> $BASH_ENV
       - run: make test       
 
 workflows: 
