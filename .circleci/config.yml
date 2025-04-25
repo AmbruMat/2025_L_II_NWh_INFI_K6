@@ -12,7 +12,7 @@ jobs:
           command: echo "export PYTHONPATH=$(pwd)" >> $BASH_ENV
       - run: make lint
       - run: make test
-      - run: make docker_build
+      - run: make docker_push
 
 workflows:
   basic:
