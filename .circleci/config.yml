@@ -1,18 +1,19 @@
-version: 2.1 
+version: 2.1
 
-jobs: 
-  build-and-test:  
-    machine: 
+jobs:
+  build-and-test:
+    machine:
       image: ubuntu-2204:current
-    steps: 
-      - checkout 
-      - run: make deps 
+    steps:
+      - checkout
+      - run: make deps
       - run:
           name: Set PYTHONPATH
           command: echo "export PYTHONPATH=$(pwd)" >> $BASH_ENV
-      - run: make test       
+      - run: make lint
+      - run: make test
 
-workflows: 
-  basic:  
-    jobs: 
-      - build-and-test 
+workflows:
+  basic:
+    jobs:
+      - build-and-test
