@@ -20,7 +20,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   Sprawdź: [tutorial venv](https://docs.python.org/3/tutorial/venv.html) oraz [biblioteki flask](http://flask.pocoo.org).
 
-- Uruchamianie applikacji:
+- Uruchamianie aplikacji:
 
   ```
   # jako zwykły program
@@ -33,8 +33,8 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 - Uruchamianie testów (see: http://doc.pytest.org/en/latest/capture.html):
 
   ```
-  $ PYTHONPATH=. py.test
-  $ PYTHONPATH=. py.test --verbose -s
+  $ PYTHONPATH=. pytest
+  $ PYTHONPATH=. pytest --verbose -s
   ```
 
 - Kontynuując pracę z projektem, aktywowanie hermetycznego środowiska dla aplikacji py:
@@ -48,7 +48,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ...
 
   # aktywacja 
-  $ source .venv/Source/activate
+  $ source .venv/bin/activate
   ```
 
 - Integracja z TravisCI:
